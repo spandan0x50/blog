@@ -1,0 +1,15 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+.first-entry.home-info {
+    min-height: auto !important;
+    margin-bottom: var(--gap) !important;
+    padding-bottom: 0 !important;
+}
+
+.post-entry:first-child {
+    margin-top: calc(var(--gap) / 2) !important;
+}
