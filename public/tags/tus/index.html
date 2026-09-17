@@ -106,7 +106,12 @@
 
 <article class="post-entry tag-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/thumbnail_gemini.png" alt="CVE-2026-73613 File Browser vulnerability">
+            <img loading="lazy"
+                srcset='http://localhost:1313/posts/filebrowser/cve-2026-73613/images/thumbnail_hu_1613aac8ff075265.jpeg 360w,http://localhost:1313/posts/filebrowser/cve-2026-73613/images/thumbnail_hu_7f4b2650f8041ee.jpeg 480w,http://localhost:1313/posts/filebrowser/cve-2026-73613/images/thumbnail_hu_f2795ee9c065cfde.jpeg 720w,http://localhost:1313/posts/filebrowser/cve-2026-73613/images/thumbnail_hu_adaf610315434f81.jpeg 1080w,http://localhost:1313/posts/filebrowser/cve-2026-73613/images/thumbnail.jpeg 1376w'
+                src="http://localhost:1313/posts/filebrowser/cve-2026-73613/images/thumbnail.jpeg"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="1376" height="768"
+                alt="CVE-2026-73613 File Browser vulnerability">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">Dissecting CVE-2026-73613: Out-of-scope file deletion via symlink-following delete in TUS upload-cache eviction

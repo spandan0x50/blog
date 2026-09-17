@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Authentication on Blog | Spandan Pokhrel</title>
+    <link>http://localhost:1313/tags/authentication/</link>
+    <description>Recent content in Authentication on Blog | Spandan Pokhrel</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/authentication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSRF on Password Reset Link leading to account takeover.</title>
+      <link>http://localhost:1313/posts/bug-bounty/csrf-on-password-reset-link-leading-to-account-takeover/</link>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bug-bounty/csrf-on-password-reset-link-leading-to-account-takeover/</guid>
+      <description>Have you ever thought of testing for CSRF vulnerabilities on a password reset link? You might not have, because we generally assume it isn&amp;#39;t possible, as the password reset link itself contains a reset token which acts as an alternative to a CSRF token. But is that assumption always correct?</description>
+    </item>
+  </channel>
+</rss>
