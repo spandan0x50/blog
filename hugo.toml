@@ -6,7 +6,6 @@ theme = 'PaperMod'
 [params]
 env = 'production'
 
-defaultTheme = 'dark'
 disableThemeToggle = false
 
 ShowReadingTime = true
@@ -16,8 +15,20 @@ ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 
 [params.homeInfoParams]
-Title = 'Hey, I’m Spandan'
-Content = 'Security research, bug bounty, and technical writeups.'
+  Title = 'Hey, I’m Spandan'
+  Content = 'Security research, bug bounty, and technical writeups.'
+
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/spandan0x50/"
+
+  [[params.socialIcons]]
+  name = "x"
+  url = "https://x.com/Spandan0x50"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/spandan0x50/"
 
 [[menu.main]]
 identifier = 'posts'

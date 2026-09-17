@@ -22,5 +22,12 @@
       <guid>http://localhost:1313/categories/security-research/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Web Security</title>
+      <link>http://localhost:1313/categories/web-security/</link>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/web-security/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
