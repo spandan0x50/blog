@@ -6,8 +6,15 @@
     <description>Recent content in File Deletion on Blog | Spandan Pokhrel</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/file-deletion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE-2026-34530: Stored XSS via text/template Branding injection</title>
+      <link>http://localhost:1313/posts/filebrowser/cve-2026-34530/</link>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/filebrowser/cve-2026-34530/</guid>
+      <description>A source-code-level breakdown of CVE-2026-34530, exploring a stored Cross-Site Scripting via template injection.</description>
+    </item>
     <item>
       <title>Dissecting CVE-2026-73613: Out-of-scope file deletion via symlink-following delete in TUS upload-cache eviction</title>
       <link>http://localhost:1313/posts/filebrowser/cve-2026-73613/</link>

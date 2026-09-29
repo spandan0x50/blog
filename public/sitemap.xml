@@ -2,16 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cve/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/cve-breakdown/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cve-2026-34530/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/filebrowser/cve-2026-34530/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/file-browser/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/file-deletion/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/path-traversal/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/security-research/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/security-research/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/symlink/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tus/</loc>
+    <lastmod>2026-09-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/account-takeover/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/authentication/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cross-site-request-forgery/</loc>
@@ -23,46 +62,13 @@
     <loc>http://localhost:1313/posts/bug-bounty/csrf-on-password-reset-link-leading-to-account-takeover/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cve/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/cve-breakdown/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/cve-2026-73613/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/filebrowser/cve-2026-73613/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/file-browser/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/file-deletion/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/password-reset/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/path-traversal/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/security-research/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/security-research/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/symlink/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-09-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tus/</loc>
     <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/web-application-security/</loc>
