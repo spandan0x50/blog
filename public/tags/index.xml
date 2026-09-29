@@ -23,11 +23,11 @@
       <description></description>
     </item>
     <item>
-      <title>File Browser</title>
+      <title>File Browser Security Research &amp; CVEs</title>
       <link>http://localhost:1313/tags/file-browser/</link>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/file-browser/</guid>
-      <description></description>
+      <description>Security research and CVE write-ups for File Browser, covering vulnerabilities, source-code analysis, symlink issues, file deletion, TUS uploads, and other security findings.</description>
     </item>
     <item>
       <title>File Deletion</title>
