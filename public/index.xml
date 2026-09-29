@@ -23,7 +23,7 @@
       <description>Think CSRF on password reset flows is impossible due to reset tokens? Think again. Here is how a misplaced reset code turned a standard reset flow into a full account takeover.</description>
     </item>
     <item>
-      <title>Dissecting CVE-2026-73613: Out-of-scope file deletion via symlink-following delete in TUS upload-cache eviction</title>
+      <title>Dissecting CVE-2026-73613: File Deletion via Symlink in TUS</title>
       <link>http://localhost:1313/posts/filebrowser/cve-2026-73613/</link>
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/filebrowser/cve-2026-73613/</guid>
