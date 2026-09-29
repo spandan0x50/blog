@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 04 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/file-deletion/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CVE-2026-34530: Stored XSS via text/template Branding injection</title>
+      <title>Dissecting CVE-2026-34530: Stored XSS via text/template Branding injection</title>
       <link>http://localhost:1313/posts/filebrowser/cve-2026-34530/</link>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/filebrowser/cve-2026-34530/</guid>
