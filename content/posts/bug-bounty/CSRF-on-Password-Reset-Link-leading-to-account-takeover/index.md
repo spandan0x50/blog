@@ -1,6 +1,7 @@
 +++
 title = "CSRF on Password Reset Link leading to account takeover."
 date = 2026-09-03
+aliases = ["/2024/05/csrf.html"]
 draft = false
 author = "Spandan Pokhrel"
 description = "Think CSRF on password reset flows is impossible due to reset tokens? Think again. Here is how a misplaced reset code turned a standard reset flow into a full account takeover."
