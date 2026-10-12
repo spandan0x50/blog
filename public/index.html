@@ -177,6 +177,30 @@
 <article class="post-entry"> 
 <figure class="entry-cover">
             <img loading="lazy"
+                srcset='http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_c0d1e706f575bd3e.jpeg 360w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_46ccbfd9d5e1235f.jpeg 480w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_d63cfe7e7d3b0d2b.jpeg 720w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_60218c56ba38f554.jpeg 1080w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail.jpeg 1365w'
+                src="http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail.jpeg"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="1365" height="768"
+                alt="CVE-2026-25889 File Browser vulnerability">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Dissecting CVE-2026-25889: Authentication Bypass
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The issue is CVE-2026-25889: Authentication Bypass in User Password Update, but when you look at the source code, it almost feels like someone went out of their way to make the code vulnerable. Of course, that’s not actually what happened.
+if d.settings.AuthMethod == auth.MethodJSONAuth { var sensibleFields = map[string]struct{}{ &#34;all&#34;: {}, &#34;username&#34;: {}, &#34;password&#34;: {}, &#34;scope&#34;: {}, &#34;lockPassword&#34;: {}, &#34;commands&#34;: {}, &#34;perm&#34;: {}, } for _, field := range req.Which { if _, ok := sensibleFields[field]; ok { if !users.CheckPwd(req.CurrentPassword, d.user.Password) { return http.StatusBadRequest, fberrors.ErrCurrentPasswordIncorrect } break } } } So, there’s a map called sensibleFields, and on each request, the Which field is checked to see whether it contains any of the listed values, such as username or password. If it does, the handler requires the current password.
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-11 00:00:00 +0000 UTC'>October 11, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Spandan Pokhrel</span></footer>
+  <a class="entry-link" aria-label="post link to Dissecting CVE-2026-25889: Authentication Bypass" href="http://localhost:1313/posts/filebrowser/cve-2026-25889/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+            <img loading="lazy"
                 srcset='http://localhost:1313/posts/filebrowser/cve-2026-34530/images/thumbnail_hu_a89493bd66e70315.jpg 360w,http://localhost:1313/posts/filebrowser/cve-2026-34530/images/thumbnail_hu_b40688fcd3f77309.jpg 480w,http://localhost:1313/posts/filebrowser/cve-2026-34530/images/thumbnail_hu_d489eb27c6d144cc.jpg 720w,http://localhost:1313/posts/filebrowser/cve-2026-34530/images/thumbnail.jpg 787w'
                 src="http://localhost:1313/posts/filebrowser/cve-2026-34530/images/thumbnail.jpg"
                 sizes="(min-width: 768px) 720px, 100vw"

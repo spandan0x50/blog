@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Blog | Spandan Pokhrel</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE-2026-25889</title>
+      <link>http://localhost:1313/tags/cve-2026-25889/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cve-2026-25889/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>File Browser</title>
+      <link>http://localhost:1313/tags/file-browser/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/file-browser/</guid>
+      <description>Security research and publicly disclosed CVE write-ups covering File Browser vulnerabilities and source-code analysis.</description>
+    </item>
+    <item>
+      <title>Security Research</title>
+      <link>http://localhost:1313/tags/security-research/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/security-research/</guid>
+      <description></description>
+    </item>
     <item>
       <title>CVE</title>
       <link>http://localhost:1313/tags/cve/</link>
@@ -23,13 +44,6 @@
       <description></description>
     </item>
     <item>
-      <title>File Browser Security Research &amp; CVEs</title>
-      <link>http://localhost:1313/tags/file-browser/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/file-browser/</guid>
-      <description>Security research and CVE write-ups for File Browser, covering vulnerabilities, source-code analysis, symlink issues, file deletion, TUS uploads, and other security findings.</description>
-    </item>
-    <item>
       <title>File Deletion</title>
       <link>http://localhost:1313/tags/file-deletion/</link>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
@@ -41,13 +55,6 @@
       <link>http://localhost:1313/tags/path-traversal/</link>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/path-traversal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security Research</title>
-      <link>http://localhost:1313/tags/security-research/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/security-research/</guid>
       <description></description>
     </item>
     <item>
