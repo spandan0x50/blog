@@ -6,8 +6,15 @@
     <description>Recent content on Blog | Spandan Pokhrel</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dissecting the Clipboard: Technical Analysis of Fake CAPTCHA (macOS)</title>
+      <link>http://localhost:1313/posts/malware-analysis/captcha/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/malware-analysis/captcha/</guid>
+      <description>A technical analysis of a fake CAPTCHA campaign targeting macOS users through clipboard injection, Terminal commands, obfuscated AppleScript, and a Polygon-based payload delivery chain.</description>
+    </item>
     <item>
       <title>Dissecting CVE-2026-25889: Authentication Bypass</title>
       <link>http://localhost:1313/posts/filebrowser/cve-2026-25889/</link>

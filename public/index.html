@@ -177,7 +177,31 @@
 <article class="post-entry"> 
 <figure class="entry-cover">
             <img loading="lazy"
-                srcset='http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_c0d1e706f575bd3e.jpeg 360w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_46ccbfd9d5e1235f.jpeg 480w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_d63cfe7e7d3b0d2b.jpeg 720w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_60218c56ba38f554.jpeg 1080w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail.jpeg 1365w'
+                srcset='http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_614206b79f9c5078.png 360w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_3118226a30d258a4.png 480w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_b776a9b9914cfb49.png 720w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_acdc820b25964938.png 1080w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail.png 1376w'
+                src="http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail.png"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="1376" height="768"
+                alt="Dissecting the Clipboard: Technical Analysis of Fake CAPTCHA (macOS)">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Dissecting the Clipboard: Technical Analysis of Fake CAPTCHA (macOS)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A few days ago, I encountered a fake CAPTCHA again. I don’t have a screenshot because I didn’t take one when the site was still available, but hey, I did have the malware shell payload copied to my clipboard. So, we’ll go with its analysis.
+So, this all comes down to a fake CAPTCHA page, where there is basically some injected JavaScript that copies something into your clipboard when the load event fires. For example:
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-22 00:00:00 +0000 UTC'>October 22, 2026</span>&nbsp;·&nbsp;<span>47 min</span>&nbsp;·&nbsp;<span>Spandan Pokhrel</span></footer>
+  <a class="entry-link" aria-label="post link to Dissecting the Clipboard: Technical Analysis of Fake CAPTCHA (macOS)" href="http://localhost:1313/posts/malware-analysis/captcha/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+            <img loading="lazy"
+                srcset='http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_17e5b5c3bb061c9e.jpeg 360w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_f653bc451b77b367.jpeg 480w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_669cc84087818a53.jpeg 720w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail_hu_4b431fd84cdf2bdf.jpeg 1080w,http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail.jpeg 1365w'
                 src="http://localhost:1313/posts/filebrowser/cve-2026-25889/images/thumbnail.jpeg"
                 sizes="(min-width: 768px) 720px, 100vw"
                 width="1365" height="768"
@@ -188,7 +212,7 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>The issue is CVE-2026-25889: Authentication Bypass in User Password Update, but when you look at the source code, it almost feels like someone went out of their way to make the code vulnerable. Of course, that’s not actually what happened.
+    <p>The issue is CVE-2026-25889: Authentication Bypass in User Password Update, but when you look at the source code, it almost feels like someone deliberately went out of their way to make the code vulnerable. Of course, that’s not actually what happened.
 if d.settings.AuthMethod == auth.MethodJSONAuth { var sensibleFields = map[string]struct{}{ &#34;all&#34;: {}, &#34;username&#34;: {}, &#34;password&#34;: {}, &#34;scope&#34;: {}, &#34;lockPassword&#34;: {}, &#34;commands&#34;: {}, &#34;perm&#34;: {}, } for _, field := range req.Which { if _, ok := sensibleFields[field]; ok { if !users.CheckPwd(req.CurrentPassword, d.user.Password) { return http.StatusBadRequest, fberrors.ErrCurrentPasswordIncorrect } break } } } So, there’s a map called sensibleFields, and on each request, the Which field is checked to see whether it contains any of the listed values, such as username or password. If it does, the handler requires the current password.
 ...</p>
   </div>
