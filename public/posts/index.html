@@ -148,10 +148,10 @@
 <article class="post-entry"> 
 <figure class="entry-cover">
             <img loading="lazy"
-                srcset='http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_5d9a808c96f7706b.png 360w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_9597a36e9755ff14.png 480w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_e2519b3e0dd6f85d.png 720w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_59679819885f0c9d.png 1080w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_42e092353e14413b.png 1500w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail.png 1666w'
+                srcset='http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_614206b79f9c5078.png 360w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_3118226a30d258a4.png 480w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_b776a9b9914cfb49.png 720w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail_hu_acdc820b25964938.png 1080w,http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail.png 1376w'
                 src="http://localhost:1313/posts/malware-analysis/captcha/images/thumbnail.png"
                 sizes="(min-width: 768px) 720px, 100vw"
-                width="1666" height="872"
+                width="1376" height="768"
                 alt="Dissecting the Clipboard: Technical Analysis of Fake CAPTCHA (macOS)">
 </figure>
   <header class="entry-header">
@@ -159,14 +159,13 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>A few days back, I landed into the fake CAPTCHA, again! I couldn’t take the screenshot because the site is no-longer available, but heyy, I do have the malware copied on my Clipboard. So, we’ll go with malware analysis.
-So, this all comes down to a fake CAPTCHA page, where there’s bascically an injected javascript to copy something into your clipboard that triggers on onload event. Eg,
-window.addEventListener(&#34;load&#34;, async()=&gt;{ await navigator.clipboard.writeText(&#34;hello&#34;) }) and the CAPTCHA asks you to run Ctrl &#43; R &#43; Ctrl &#43; V (Windows) or Terminal &#43; ⌘ &#43; V (macOS), and paste the content there, which is silently copied to your clipboard.
+    <p>A few days ago, I encountered a fake CAPTCHA again. I don’t have a screenshot because I didn’t take one when the site was still available, but hey, I did have the malware shell payload copied to my clipboard. So, we’ll go with its analysis.
+So, this all comes down to a fake CAPTCHA page, where there is basically some injected JavaScript that copies something into your clipboard when the load event fires. For example:
 ...</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-10-22 00:00:00 +0000 UTC'>October 22, 2026</span>&nbsp;·&nbsp;<span>45 min</span>&nbsp;·&nbsp;<span>Spandan Pokhrel</span></footer>
+<span title='2026-10-22 00:00:00 +0000 UTC'>October 22, 2026</span>&nbsp;·&nbsp;<span>47 min</span>&nbsp;·&nbsp;<span>Spandan Pokhrel</span></footer>
   <a class="entry-link" aria-label="post link to Dissecting the Clipboard: Technical Analysis of Fake CAPTCHA (macOS)" href="http://localhost:1313/posts/malware-analysis/captcha/"></a>
 </article>
 
